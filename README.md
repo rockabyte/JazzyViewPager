@@ -46,23 +46,6 @@ private JazzyViewPager mJazzy;
 mJazzy.setTransitionEffect(TransitionEffect.*);
 ```
 
-
-Modifying your `PagerAdapter`
--------
-Due to the limitations of the `ViewPager` class (which `JazzyViewPager` is built upon) in order to get the animations to work correctly 
-for more than 3 Views, you'll have to add the following to the `instantiateItem` method of your `PagerAdapter`.
-```java
-private JazzyViewPager mJazzy;
-/* ... */
-@Override
-public Object instantiateItem(ViewGroup container, final int position) {
-    Object obj = super.instantiateItem(container, position);
-	mJazzy.setObjectForPosition(obj, position);
-	return obj;
-}
-```
-Once your `Object` is registered with the `JazzyViewPager`, you're good to go!
-
 License
 -------
 
