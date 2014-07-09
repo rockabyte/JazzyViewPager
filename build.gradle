@@ -7,8 +7,6 @@ buildscript {
     }
 }
 
-project.buildDir = "/Volumes/${rootProject.ramdiskName}/13_AN_Travian_Build_Dir/libs/JazzyViewPager"
-
 allprojects {
     repositories {
         mavenCentral()
